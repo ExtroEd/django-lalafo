@@ -1,10 +1,17 @@
 from django.contrib import admin
+from .models import Category, Item, ItemImages
 
-# Register your models here.
 
-from .models import Category
-
+@admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(Category, CategoryAdmin)
+
+@admin.register(Item)
+class ItemAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(ItemImages)
+class ItemImagesAdmin(admin.ModelAdmin):
+    pass
